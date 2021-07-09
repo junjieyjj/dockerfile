@@ -30,4 +30,4 @@ jobs:
         with:
           context: ./jenkins
           push: true
-          tags: user/app:latest
+          tags: junjieyjj/jenkins-slave:test
