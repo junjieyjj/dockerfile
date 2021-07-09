@@ -1,3 +1,0 @@
-FROM jenkins:2.293
-USER jenkins
-ADD jenkins-plugins.tar.gz /usr/share/jenkins/ref
