@@ -25,14 +25,14 @@ jobs:
         name: Build Jenkins centos image with plugins
         run: |
           sudo apt-get install -y jq curl
-          curl -s 'https://registry.hub.docker.com/v1/repositories/jenkins/jenkins/tags' | jq '.[].name' | grep centos7 | head -3 | tr -d '"' > /tmp/tags
+          curl -s 'https://registry.hub.docker.com/v1/repositories/jenkins/jenkins/tags' | jq '.[].name' | grep centos7 | tr -d '"' > /tmp/tags
           echo ${{ secrets.ACR_TOKEN }} | docker login --username=${{ secrets.ACR_USERNAME }} --password-stdin registry.cn-shenzhen.aliyuncs.com
           cd ./jenkins
           cat /tmp/tags | while read line
           do
             if [ $(cat jenkins_history.txt | grep ${line} | wc -l) == 0 ];then
               sed "s/IMAGE_TAG/$line/g" ./Dockerfile_template > ./Dockerfile
-              docker build -t registry.cn-shenzhen.aliyuncs.com/jackops/jenkins:${line}-plugins -f ./Dockerfile .
+              docker build --no-cache -t registry.cn-shenzhen.aliyuncs.com/jackops/jenkins:${line}-plugins -f ./Dockerfile .
               docker push registry.cn-shenzhen.aliyuncs.com/jackops/jenkins:${line}-plugins
               echo ${line} >> jenkins_history.txt
               rm -f ./Dockerfile
