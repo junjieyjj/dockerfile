@@ -35,6 +35,7 @@ jobs:
               docker build -t registry.cn-shenzhen.aliyuncs.com/jackops/jenkins:${line}-plugins -f ./Dockerfile .
               docker push registry.cn-shenzhen.aliyuncs.com/jackops/jenkins:${line}-plugins
               echo ${line} >> jenkins_history.txt
+              rm -f ./Dockerfile
             fi
           done
       - 
