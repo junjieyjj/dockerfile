@@ -27,7 +27,7 @@ jobs:
           cd ./jenkins
           cat /tmp/tags | while read line
           do
-            sed "s/IMAGE_TAG/${line}/g" Dockerfile_template > ./Dockerfile
+            sed "s/IMAGE_TAG/$line/g" ./Dockerfile_template > ./Dockerfile
             docker build -t registry.cn-shenzhen.aliyuncs.com/jackops/jenkins:${line}-plugins -f ./Dockerfile .
             docker push registry.cn-shenzhen.aliyuncs.com/jackops/jenkins:${line}-plugins
           done
