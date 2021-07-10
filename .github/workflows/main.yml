@@ -20,10 +20,13 @@ jobs:
         uses: docker/setup-buildx-action@v1
       - 
         name: Install dependence
-        run: sudo apt-get install -y jq curl; curl -s 'https://registry.hub.docker.com/v1/repositories/jenkins/jenkins/tags' | jq '.[].name' | grep centos7 | tr -d '"' > /tmp/tags
-      - 
-        name: Test Docker
-        run: docks images; docker ps
+        run: |
+          sudo apt-get install -y jq curl
+          curl -s 'https://registry.hub.docker.com/v1/repositories/jenkins/jenkins/tags' | jq '.[].name' | grep centos7 | tr -d '"' > /tmp/tags
+          docker version
+          docker images
+          docker ps
+
       # -
       #   name: Login to DockerHub
       #   uses: docker/login-action@v1
