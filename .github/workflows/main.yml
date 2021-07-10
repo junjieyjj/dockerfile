@@ -23,9 +23,9 @@ jobs:
         run: |
           sudo apt-get install -y jq curl
           curl -s 'https://registry.hub.docker.com/v1/repositories/jenkins/jenkins/tags' | jq '.[].name' | grep centos7 | tr -d '"' > /tmp/tags
-          docker version
-          docker images
-          docker ps
+          cat /tmp/tags
+          ls -lrt *
+          echo ${{ secrets.ACR_TOKEN }} | docker login --username=${{ secrets.ACR_USERNAME }} --password-stdin registry.cn-shenzhen.aliyuncs.com
 
       # -
       #   name: Login to DockerHub
