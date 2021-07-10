@@ -19,7 +19,7 @@ jobs:
         name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
       - 
-        name: Install dependence
+        name: Build Jenkins centos image with plugins
         run: |
           sudo apt-get install -y jq curl
           curl -s 'https://registry.hub.docker.com/v1/repositories/jenkins/jenkins/tags' | jq '.[].name' | grep centos7 | tr -d '"' > /tmp/tags
@@ -28,7 +28,7 @@ jobs:
           cat /tmp/tags | while read line
           do
             docker build -t registry.cn-shenzhen.aliyuncs.com/jackops/jenkins:${line}-plugins -f Dockerfile .
-            docker images 
+            docker push registry.cn-shenzhen.aliyuncs.com/jackops/jenkins:${line}-plugins
           done
 
       # -
@@ -51,5 +51,5 @@ jobs:
       #     context: ./jenkins
       #     push: true
       #     tags: |
-      #       registry.cn-shenzhen.aliyuncs.com/jackops/jenkins-slave:test
+      #       registry.cn-shenzhen.aliyuncs.com/jackops/jenkins:test
 
