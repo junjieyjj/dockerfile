@@ -46,3 +46,4 @@
 2.245-centos7
 2.246-centos7
 2.247-centos7
+2.248-centos7
