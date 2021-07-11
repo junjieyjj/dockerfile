@@ -93,3 +93,4 @@
 2.277.1-centos7
 2.277.1-lts-centos7
 2.277.2-centos7
+2.277.2-lts-centos7
