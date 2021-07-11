@@ -78,3 +78,4 @@
 2.263.4-lts-centos7
 2.264-centos7
 2.265-centos7
+2.266-centos7
