@@ -99,3 +99,4 @@
 2.277.4-centos7
 2.277.4-lts-centos7
 2.278-centos7
+2.279-centos7
