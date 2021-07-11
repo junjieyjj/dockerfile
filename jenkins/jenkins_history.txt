@@ -48,3 +48,4 @@
 2.247-centos7
 2.248-centos7
 2.249-centos7
+2.249.1-centos7
