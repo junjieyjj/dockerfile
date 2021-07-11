@@ -26,3 +26,4 @@
 2.235-centos7
 2.235.1-centos7
 2.235.1-lts-centos7
+2.235.2-centos7
