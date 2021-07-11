@@ -102,3 +102,4 @@
 2.279-centos7
 2.280-centos7
 2.281-centos7
+2.282-centos7
