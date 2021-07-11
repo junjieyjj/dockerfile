@@ -56,3 +56,4 @@
 2.249.3-lts-centos7
 2.250-centos7
 2.251-centos7
+2.252-centos7
