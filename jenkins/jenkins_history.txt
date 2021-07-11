@@ -34,3 +34,4 @@
 2.235.4-lts-centos7
 2.235.5-centos7
 2.235.5-lts-centos7
+2.236-centos7
