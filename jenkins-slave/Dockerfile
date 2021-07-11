@@ -36,6 +36,8 @@ RUN mkdir -p /usr/share/maven /usr/share/maven/ref \
   && rm -f /tmp/apache-maven.tar.gz \
   && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
 
+ADD settings.xml /usr/share/maven/conf/settings.xml
+
 ENV MAVEN_HOME /usr/share/maven
 ENV MAVEN_CONFIG "$USER_HOME_DIR/.m2"
 
@@ -75,4 +77,3 @@ RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2
   && mv kubectl /usr/local/bin/
 
 ENTRYPOINT ["/usr/local/bin/jenkins-agent"]
-
