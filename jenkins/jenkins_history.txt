@@ -6,3 +6,4 @@
 2.219-centos7
 2.220-centos7
 2.221-centos7
+2.222-centos7
