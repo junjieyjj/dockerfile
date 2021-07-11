@@ -113,3 +113,4 @@
 2.289.1-centos7
 2.289.1-lts-centos7
 2.289.2-centos7
+2.289.2-lts-centos7
