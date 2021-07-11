@@ -62,3 +62,4 @@
 2.255-centos7
 2.256-centos7
 2.257-centos7
+2.258-centos7
