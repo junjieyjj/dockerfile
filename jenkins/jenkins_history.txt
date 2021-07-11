@@ -53,3 +53,4 @@
 2.249.2-centos7
 2.249.2-lts-centos7
 2.249.3-centos7
+2.249.3-lts-centos7
