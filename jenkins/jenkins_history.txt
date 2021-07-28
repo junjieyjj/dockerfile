@@ -129,3 +129,4 @@
 2.302-centos7
 2.303-centos7
 2.304-centos7
+2.289.3-centos7
