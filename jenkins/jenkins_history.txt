@@ -130,3 +130,4 @@
 2.303-centos7
 2.304-centos7
 2.289.3-centos7
+2.289.3-lts-centos7
