@@ -136,3 +136,4 @@
 2.306-centos7-jdk8
 2.307-centos7
 2.307-centos7-jdk8
+centos7-jdk11
