@@ -138,3 +138,4 @@
 2.307-centos7-jdk8
 centos7-jdk11
 2.308-centos7
+2.308-centos7-jdk8
