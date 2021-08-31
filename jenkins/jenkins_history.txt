@@ -144,3 +144,4 @@ centos7-jdk11
 lts-centos7-jdk11
 lts-centos7-jdk8
 2.309-centos7
+2.309-centos7-jdk8
