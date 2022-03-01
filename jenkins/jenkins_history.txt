@@ -212,3 +212,4 @@ lts-centos7-jdk8
 2.335-centos7-jdk8
 2.336-centos7
 2.336-centos7-jdk8
+2.337-centos7
